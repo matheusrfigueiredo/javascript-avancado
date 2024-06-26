@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Avançado - Módulo 1 </title>
+    <script>
+        /*Funções*/
+        function sayHello(name, lastName){
+            console.log(`Olá, ${name} ${lastName}. Bem vindo(a) à Dev Samurai`)
+        }
+
+        sayHello()
+
+        /*Função de soma*/
+        function sum(n1, n2){
+            console.log(n1 + n2)
+        }
+
+        /*função e Return*/
+        function multiplica(numb1, numb2){
+            const result = numb1 * numb2
+            return result
+        }
+
+        const result = multiplica(2, 2)
+        console.log(result)
+
+        /*Object arguments*/
+        // arguments
+
+        function soma (){
+            // arguments
+            let res = 0
+
+            for (const n of arguments){
+                rest += n
+                console.log(n)
+            }
+            return res
+        }
+
+        console.log(soma(1, 2))
+
+        // comando - typeof:  mostra o tipo da função ou variável
+        //-------------------------------------------------------
+
+        // Função de multiplicação
+        function mult(n){
+            let res = n
+            res *= n
+            return res
+        }
+
+        let n = 10
+        console.log(mult(n))
+
+        // ------------------------------------------------- Ex..: 2
+        function multi(num){
+            num *= num
+            return num
+        }
+        let numVal = 10
+        console.log(multi(numVal))
+        console.log(numVal)
+        
+        function multObj(obj){
+            obj.value *= obj.value
+            return obj  
+        }
+        const numObj = {value: 10}
+        console.log(multObj(numObj))
+
+        // ----------------------------------------------------------------
+        // function scooped
+        console.log(mult(10))
+        const mult = function (n) {
+            n *= n
+            return n
+        }
+        //------------------------------------------------------------------
+        // Arrow Functions
+        const mult = (n) => {
+            n *= n
+            return n
+        }
+
+        //sintaxe econômica - arrow functions
+        const mult = (n) => (n *= n)
+        //-------------------------------------------------------------------
+
+        // functions callbacks
+        function mult(values, func) {
+            for (let i = o; i < values.length; i++){
+                values[i] = func(values[i])
+            }
+            return values
+        }
+
+        const values = [1, 2, 3, 4, 10, 20]
+        const func = (n) => n * n
+
+        console.log(mult(values, func))
+
+        //callbacks: map, filter, reduce
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Módulo 2 - Javascript Avançado</title>
+</head>
+<body>
+    <script>
+        // Type casting = Conversão pelo Usuário;
+        // Type coersion = Conversão 'coercitiva' pela VM;
+        
+        // Conversões
+        // string to number
+        console.log(Number("2") + 2)
+        console.log(Number(true)) // = 1
+        console.log(Number(false)) // = 0
+        //number to string
+        console.log(String(2))
+
+        // '30/04/2022' to Date
+
+        // Date -> Formato ISO
+        console.log(new Date('04/30/2022'))
+        console.log(new Date('2022-04-30'))
+        console.log(new Date('2022 04 30'))
+
+        // transformar em string
+        console.log(new Date().toString())
+        console.log(new Date().toISOString())
+
+
+        // String to Array
+        // Uma string se comparta basicamente como um Array;
+        let name = "Felipe"
+
+        console.log(name)
+
+        // Percorrendo com for
+        for (const v of name){
+            console.log(v)
+        }
+
+        // Mostrando tamanho da string
+        console.log(name.length)
+
+        let values = [1, 2, 3, 4, 5, 10, 20]
+
+        values = ["M", "A", "T", "H", "E", "U", "S"]
+
+        // Transformar um array para string, é possível informar o caractere que quer juntar.
+        console.log(values.join())
+
+        console.log(values.join(" "))
+
+        // Separar String divididas em mais de uma palavra;
+        // Ex..: Matheus Ribeiro
+        console.log(name.split(",")) // Bom para trabalhar com CSV
+
+        // -----------------------------------------------------------
+        // CASAS DECIMAIS - FORMATAÇÃO E ARREDONDAMENTO
+
+        // toFixed()
+        // Math.ceil()
+        // Math.floor()
+        // Math.round()
+        // new IntL.NumberFormat().format()
+
+        let value = 1234.59
+
+        console.log(value.toFixed(1))
+        console.log(Math.ceil(value))
+        console.log(Math.floor(value))
+        console.log(Math.round(value))
+
+        console.log(
+            new Intl.NumberFormat("pt-BR", {
+                style: "currency",
+                currency: "BRL"
+            }).format(value)
+        )
+        
+        // CONTANDOS DÍGITOS
+
+    </script>
+</body>
+</html>
